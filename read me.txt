@@ -1,0 +1,20 @@
+/zed/.env
+DATABASE_URL=mysql://login:password@127.0.0.1:3306/zet
+change login/password
+
+------------------------
+
+go to /zed and run:
+php bin/console doctrine:database:create
+php app/console doctrine:migrations:migrate
+php bin/console server:run
+
+------------------------
+
+opend another command line go to /zed_vue and run:
+npm run dev
+
+------------------------
+
+change:
+post_max_size=100M php.ini
